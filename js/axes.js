@@ -1,0 +1,64 @@
+// 意识形态维度（轴）定义 —— 拓展为 10 个维度
+// 每个轴取值 -100（左极）到 +100（右极），符号方向见 each 轴的 right 说明。
+window.AXES = [
+  {
+    key: 'ECON',
+    name: '经济左—右',
+    left: '经济左翼', leftDesc: '公有制 · 再分配 · 福利国家 · 累进税',
+    right: '经济右翼', rightDesc: '私有制 · 自由市场 · 低税 · 去监管'
+  },
+  {
+    key: 'SOC',
+    name: '社会自由—威权',
+    left: '社会自由', leftDesc: '个人自主 · 宽容 · 少干预',
+    right: '社会威权', rightDesc: '秩序 · 道德管控 · 国家约束'
+  },
+  {
+    key: 'PROG',
+    name: '进步—传统',
+    left: '进步主义', leftDesc: '社会变革 · 平权 · 现代价值',
+    right: '传统主义', rightDesc: '守成 · 既有规范 · 习俗'
+  },
+  {
+    key: 'GLOB',
+    name: '全球—民族',
+    left: '全球主义', leftDesc: '国际主义 · 开放 · 普世',
+    right: '民族主义', rightDesc: '本国优先 · 文化保护 · 主权'
+  },
+  {
+    key: 'SEC',
+    name: '世俗—宗教',
+    left: '世俗主义', leftDesc: '政教分离 · 理性',
+    right: '宗教导向', rightDesc: '信仰权威 · 神法 · 教义'
+  },
+  {
+    key: 'ECO',
+    name: '环保—发展',
+    left: '环保优先', leftDesc: '生态保护 · 可持续',
+    right: '发展优先', rightDesc: '经济增长 · 人类中心 · 开发'
+  },
+  {
+    key: 'HIER',
+    name: '平等—等级',
+    left: '平等主义', leftDesc: '反等级 · 草根民主',
+    right: '等级秩序', rightDesc: '精英 · 权威 · 自然阶序'
+  },
+  {
+    key: 'INDV',
+    name: '个人—集体',
+    left: '个人主义', leftDesc: '自我实现 · 个人权利与选择优先',
+    right: '集体主义', rightDesc: '群体 · 社群 · 国家 · 家庭整体优先'
+  },
+  {
+    key: 'REV',
+    name: '改良—革命',
+    left: '改良主义', leftDesc: '渐进 · 制度内改革 · 法治渐进',
+    right: '革命激进', rightDesc: '根本颠覆 · 打破现状 · 非常规手段'
+  },
+  {
+    key: 'PEACE',
+    name: '和平—强硬',
+    left: '和平主义', leftDesc: '外交 · 反战 · 冲突降级 · 非暴力',
+    right: '强硬路线', rightDesc: '军事强硬 · 铁腕 · 以力维权 · 强制裁'
+  }
+];

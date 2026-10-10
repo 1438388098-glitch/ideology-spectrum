@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据管理 · 意识形态光谱</title>
+<style>
+  :root {
+    --bg: #faf9f6;
+    --bg-elev: #ffffff;
+    --bg-soft: #f1efe9;
+    --text: #23211c;
+    --text-soft: #6f6a5f;
+    --border: #e4e0d7;
+    --ink: #2b2b2b;
+    --accent: #8a5a2b;
+    --accent-soft: #f3ece2;
+    --red: #b0533f;
+    --green: #4c7a4e;
+    --shadow: 0 1px 2px rgba(40,35,25,.04), 0 10px 30px rgba(40,35,25,.05);
+    --radius: 10px;
+    --serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { width: min(1080px, 94vw); margin: 0 auto; }
+
+  /* ---------- 通用 ---------- */
+  .btn {
+    border: 1px solid var(--ink); border-radius: 2px; padding: 10px 24px;
+    font-size: 14px; cursor: pointer; font-weight: 500; transition: .15s;
+    font-family: var(--serif); letter-spacing: .5px; background: transparent; color: var(--text);
+  }
+  .btn-primary { background: var(--ink); color: #fff; }
+  .btn-primary:hover { background: #000; }
+  .btn-ghost { border-color: var(--border); }
+  .btn-ghost:hover { background: var(--bg-soft); }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .card {
+    background: var(--bg-elev); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px 24px; box-shadow: var(--shadow);
+  }
+  .card h3 { margin: 0 0 14px; font-size: 16px; font-weight: 600; letter-spacing: .5px; }
+  .card h3 .dot { color: var(--accent); margin-right: 6px; font-size: 13px; }
+  .muted { color: var(--text-soft); }
+
+  /* ---------- 登录页 ---------- */
+  #loginView { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+  #loginView .panel { width: 100%; max-width: 400px; text-align: center; }
+  #loginView .brand { font-size: 20px; font-weight: 600; margin-bottom: 4px; letter-spacing: 1px; }
+  #loginView .brand-mark { color: var(--accent); margin-right: 8px; }
+  #loginView .sub { color: var(--text-soft); font-size: 13.5px; margin-bottom: 26px; }
+  #loginView .card { text-align: left; }
+  #loginView label { display: block; font-size: 13.5px; color: var(--text-soft); margin-bottom: 8px; }
+  #loginView input {
+    width: 100%; padding: 11px 14px; font-size: 15px; border: 1px solid var(--border);
+    border-radius: 4px; background: var(--bg-elev); font-family: var(--serif); color: var(--text);
+    outline: none; transition: .15s;
+  }
+  #loginView input:focus { border-color: var(--accent); }
+  #loginView .btn { width: 100%; margin-top: 16px; }
+  #loginErr { color: var(--red); font-size: 13.5px; margin-top: 12px; min-height: 20px; display: none; }
+  #loginErr.show { display: block; }
+
+  /* ---------- 主面板 ---------- */
+  .site-header {
+    border-bottom: 1px solid var(--border);
+    background: rgba(250,249,246,.86);
+    backdrop-filter: saturate(180%) blur(10px);
+    position: sticky; top: 0; z-index: 50;
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 17px; letter-spacing: .5px; }
+  .brand-mark { color: var(--accent); }
+  .header-actions { display: flex; align-items: center; gap: 14px; }
+  #welcome { font-size: 13px; color: var(--text-soft); }
+
+  .main-wrap { padding: 28px 0 60px; }
+  .page-title { font-size: 24px; font-weight: 600; margin: 0 0 4px; letter-spacing: .5px; }
+  .page-sub { color: var(--text-soft); font-size: 13.5px; margin: 0 0 22px; }
+
+  /* 统计卡片 */
+  .stat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-bottom: 22px; }
+  .stat-card { background: var(--bg-elev); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
+  .stat-card .label { font-size: 12.5px; color: var(--text-soft); letter-spacing: .5px; }
+  .stat-card .value { font-size: 26px; font-weight: 700; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .stat-card .value .unit { font-size: 13px; font-weight: 400; color: var(--text-soft); margin-left: 3px; }
+  .stat-card.accent { border-top: 3px solid var(--accent); }
+  .stat-card .mode-tag { font-size: 12px; color: var(--accent); font-weight: 600; }
+
+  /* 图表区 */
+  .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 22px; }
+  .chart-grid .full { grid-column: 1 / -1; }
+
+  /* 横向条形图（意识形态分布） */
+  .hbar-row { display: grid; grid-template-columns: 150px 1fr 46px; gap: 12px; align-items: center; margin-bottom: 9px; font-size: 13.5px; }
+  .hbar-row .lbl { color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hbar-track { height: 14px; background: var(--bg-soft); border-radius: 3px; overflow: hidden; }
+  .hbar-fill { height: 100%; background: var(--accent); border-radius: 3px; transition: width .4s; }
+  .hbar-row .num { text-align: right; color: var(--text-soft); font-variant-numeric: tabular-nums; }
+  .empty-note { color: var(--text-soft); font-size: 13.5px; padding: 20px 0; text-align: center; }
+
+  /* 10 维平均画像（居中轴） */
+  .axis-row { display: grid; grid-template-columns: 92px 1fr 64px; gap: 10px; align-items: center; font-size: 13px; margin-bottom: 8px; }
+  .axis-row .lbl { color: var(--text-soft); white-space: nowrap; }
+  .axis-track { position: relative; height: 16px; background: linear-gradient(90deg, var(--green) 0%, var(--bg-soft) 48%, var(--bg-soft) 52%, var(--red) 100%); border-radius: 3px; }
+  .axis-track .mid { position: absolute; left: 50%; top: -2px; bottom: -2px; width: 1px; background: var(--border); }
+  .axis-track .bar { position: absolute; top: 0; bottom: 0; border-radius: 3px; }
+  .axis-track .bar.neg { background: var(--green); right: 50%; }
+  .axis-track .bar.pos { background: var(--red); left: 50%; }
+  .axis-row .val { text-align: right; color: var(--text); font-variant-numeric: tabular-nums; }
+  .legend { display: flex; gap: 16px; font-size: 12.5px; color: var(--text-soft); margin-top: 6px; }
+  .legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; }
+  .legend .sw.red { background: var(--red); }
+  .legend .sw.green { background: var(--green); }
+
+  /* 政府适配度等级分布 */
+  .gbar-row { display: grid; grid-template-columns: 110px 1fr 70px; gap: 12px; align-items: center; margin-bottom: 10px; font-size: 13.5px; }
+  .gbar-row .lbl { color: var(--text); }
+  .gbar-track { height: 14px; background: var(--bg-soft); border-radius: 3px; overflow: hidden; }
+  .gbar-fill { height: 100%; background: var(--ink); border-radius: 3px; transition: width .4s; }
+  .gbar-row .num { text-align: right; color: var(--text-soft); font-variant-numeric: tabular-nums; }
+
+  /* 近 14 天趋势 */
+  .trend-wrap { display: flex; align-items: flex-end; gap: 8px; height: 150px; padding-top: 10px; }
+  .trend-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 5px; height: 100%; justify-content: flex-end; }
+  .trend-bar { width: 70%; background: var(--accent); border-radius: 3px 3px 0 0; transition: height .4s; min-height: 2px; }
+  .trend-bar:hover { background: var(--ink); }
+  .trend-date { font-size: 11px; color: var(--text-soft); white-space: nowrap; }
+  .trend-num { font-size: 11.5px; color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* 表格 */
+  .table-card { overflow: hidden; }
+  .table-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .table-toolbar .info { font-size: 13.5px; color: var(--text-soft); }
+  .table-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th, td { border: 1px solid var(--border); padding: 9px 11px; text-align: center; white-space: nowrap; }
+  th { background: var(--bg-soft); font-weight: 600; letter-spacing: .5px; }
+  td.name { text-align: left; }
+  td .grade { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; background: var(--accent-soft); color: var(--accent); border: 1px solid #e3d4bf; }
+  .pager { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 16px; }
+  .pager .page-info { font-size: 13.5px; color: var(--text-soft); font-variant-numeric: tabular-nums; }
+
+  /* 页脚 */
+  .site-footer { border-top: 1px solid var(--border); padding: 20px 0; color: var(--text-soft); font-size: 12.5px; text-align: center; }
+
+  @media (max-width: 900px) {
+    .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    .chart-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== 登录界面 ==================== -->
+<div id="loginView">
+  <div class="panel">
+    <div class="brand"><span class="brand-mark">◎</span>意识形态光谱</div>
+    <div class="sub">数据管理后台 · 请登录后查看</div>
+    <div class="card">
+      <label for="pwdInput">管理员密码</label>
+      <input type="password" id="pwdInput" placeholder="请输入密码" autocomplete="current-password">
+      <button class="btn btn-primary" id="loginBtn">登 录</button>
+      <div id="loginErr"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== 主面板 ==================== -->
+<div id="mainView" hidden>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand"><span class="brand-mark">◎</span>意识形态光谱 · 数据管理</div>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="../" style="text-decoration:none">← 返回主站</a>
+        <span id="welcome">管理员</span>
+        <button class="btn btn-ghost" id="logoutBtn">退出登录</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-wrap">
+    <h1 class="page-title">数据总览</h1>
+    <p class="page-sub">答题者提交的测试结果与统计</p>
+
+    <!-- 顶部统计卡片 -->
+    <div class="stat-grid" id="statGrid">
+      <div class="stat-card accent"><div class="label">总答题人数</div><div class="value">-</div></div>
+      <div class="stat-card"><div class="mode-tag">50 题模式</div><div class="value">-</div></div>
+      <div class="stat-card"><div class="mode-tag">100 题模式</div><div class="value">-</div></div>
+      <div class="stat-card"><div class="mode-tag">200 题模式</div><div class="value">-</div></div>
+      <div class="stat-card"><div class="label">平均政府适配度</div><div class="value">-<span class="unit">/ 100</span></div></div>
+    </div>
+
+    <!-- 图表区 -->
+    <div class="chart-grid">
+      <div class="card">
+        <h3><span class="dot">■</span>意识形态分布</h3>
+        <div id="ideoChart"></div>
+      </div>
+      <div class="card">
+        <h3><span class="dot">■</span>10 维平均画像</h3>
+        <div id="axisChart"></div>
+        <div class="legend">
+          <span><span class="sw red"></span>正值 / 右向（+100 为极端）</span>
+          <span><span class="sw green"></span>负值 / 左向（-100 为极端）</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3><span class="dot">■</span>政府适配度等级分布</h3>
+        <div id="govChart"></div>
+      </div>
+      <div class="card">
+        <h3><span class="dot">■</span>近 14 天答题趋势</h3>
+        <div id="trendChart"></div>
+      </div>
+    </div>
+
+    <!-- 答题记录 -->
+    <div class="card table-card">
+      <h3><span class="dot">■</span>答题记录</h3>
+      <div class="table-toolbar">
+        <span class="info" id="recordInfo">加载中…</span>
+        <button class="btn btn-ghost" id="exportBtn">导出 CSV</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>时间</th><th>模式</th><th>用户名</th>
+              <th>最贴近意识形态</th><th>匹配度</th><th>政府适配度</th><th>等级</th>
+            </tr>
+          </thead>
+          <tbody id="recordBody">
+            <tr><td colspan="8" class="muted">加载中…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <button class="btn btn-ghost" id="prevPage">上一页</button>
+        <span class="page-info" id="pageInfo">-</span>
+        <button class="btn btn-ghost" id="nextPage">下一页</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">意识形态光谱 · 数据管理面板 · 数据仅用于本站统计分析</footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var API_PREFIX = '/api';
+  var SIZE = 20;                 // 每页条数
+  var TOKEN_KEY = 'admin_token';
+  var state = {
+    token: localStorage.getItem(TOKEN_KEY) || '',
+    page: 1,
+    totalPages: 1,
+    stats: null
+  };
+
+  // 10 个轴的显示名称（与前端 axes.js 一致）
+  var AXIS_NAMES = {
+    ECON: '经济左—右', SOC: '社会自由—威权', PROG: '进步—传统',
+    GLOB: '全球—民族', SEC: '世俗—宗教', ECO: '环保—发展',
+    HIER: '平等—等级', INDV: '个人—集体', REV: '改良—革命',
+    PEACE: '和平—强硬'
+  };
+  var AXIS_ORDER = ['ECON', 'SOC', 'PROG', 'GLOB', 'SEC', 'ECO', 'HIER', 'INDV', 'REV', 'PEACE'];
+
+  var $ = function (id) { return document.getElementById(id); };
+
+  // ---------- 通用请求封装 ----------
+  function api(path, options) {
+    options = options || {};
+    options.headers = options.headers || {};
+    options.headers['Content-Type'] = 'application/json; charset=utf-8';
+    return fetch(API_PREFIX + path, options).then(function (resp) {
+      if (resp.status === 401) {
+        onUnauthorized();
+        var e = new Error('未授权');
+        e.status = 401;
+        throw e;
+      }
+      return resp.json().then(function (data) {
+        if (data && data.ok === false) {
+          var err = new Error(data.error || '请求失败');
+          err.status = resp.status;
+          throw err;
+        }
+        return data;
+      });
+    });
+  }
+
+  function onUnauthorized() {
+    state.token = '';
+    localStorage.removeItem(TOKEN_KEY);
+    showLogin();
+  }
+
+  // ---------- 视图切换 ----------
+  function showLogin() {
+    $('mainView').hidden = true;
+    $('loginView').style.display = 'flex';
+    $('loginErr').classList.remove('show');
+  }
+
+  function showMain() {
+    $('loginView').style.display = 'none';
+    $('mainView').hidden = false;
+  }
+
+  // ---------- 登录 ----------
+  function doLogin() {
+    var pwd = $('pwdInput').value;
+    var errEl = $('loginErr');
+    if (!pwd) { errEl.textContent = '请输入密码'; errEl.classList.add('show'); return; }
+    errEl.classList.remove('show');
+    api('/login', {
+      method: 'POST',
+      body: JSON.stringify({ password: pwd })
+    }).then(function (data) {
+      state.token = data.token;
+      localStorage.setItem(TOKEN_KEY, data.token);
+      state.page = 1;
+      showMain();
+      loadAll();
+    }).catch(function (e) {
+      if (e.status === 401) {
+        errEl.textContent = '密码错误，请重试';
+        errEl.classList.add('show');
+      } else {
+        errEl.textContent = '登录失败：' + e.message;
+        errEl.classList.add('show');
+      }
+    });
+  }
+
+  function doLogout() {
+    state.token = '';
+    localStorage.removeItem(TOKEN_KEY);
+    showLogin();
+  }
+
+  // ---------- 数据加载 ----------
+  function queryStr(params) {
+    var parts = [];
+    Object.keys(params).forEach(function (k) {
+      parts.push(encodeURIComponent(k) + '=' + encodeURIComponent(params[k]));
+    });
+    return parts.length ? '?' + parts.join('&') : '';
+  }
+
+  function loadAll() {
+    loadStats();
+    loadRecords();
+  }
+
+  function loadStats() {
+    api('/admin/stats' + queryStr({ token: state.token })).then(function (data) {
+      state.stats = data.stats;
+      renderStats(data.stats);
+    }).catch(function () { /* 401 已由 api() 处理 */ });
+  }
+
+  function loadRecords() {
+    api('/admin/records' + queryStr({ token: state.token, page: state.page, size: SIZE }))
+      .then(function (data) {
+        state.totalPages = Math.max(1, Math.ceil(data.total / data.size));
+        renderRecords(data);
+      }).catch(function () { /* 401 已由 api() 处理 */ });
+  }
+
+  // ---------- 渲染：统计 ----------
+  function renderStats(s) {
+    if (!s) return;
+    var cards = $('statGrid').children;
+    cards[0].querySelector('.value').textContent = s.total;
+    cards[1].querySelector('.value').textContent = s.byMode['50'] || 0;
+    cards[2].querySelector('.value').textContent = s.byMode['100'] || 0;
+    cards[3].querySelector('.value').textContent = s.byMode['200'] || 0;
+    cards[4].querySelector('.value').innerHTML = s.govAvg + '<span class="unit">/ 100</span>';
+
+    renderIdeoChart(s.byIdeo);
+    renderAxisChart(s.axisAvg);
+    renderGovChart(s.govGrades);
+    renderTrendChart(s.daily);
+  }
+
+  // 意识形态分布（横向条形）
+  function renderIdeoChart(byIdeo) {
+    var el = $('ideoChart');
+    var keys = Object.keys(byIdeo || {});
+    if (!keys.length) { el.innerHTML = '<div class="empty-note">暂无数据</div>'; return; }
+    var max = 1;
+    keys.forEach(function (k) { if (byIdeo[k] > max) max = byIdeo[k]; });
+    var html = '';
+    keys.slice(0, 12).forEach(function (k) {
+      var pct = Math.round(byIdeo[k] / max * 100);
+      html += '<div class="hbar-row">'
+        + '<span class="lbl" title="' + escHtml(k) + '">' + escHtml(k) + '</span>'
+        + '<div class="hbar-track"><div class="hbar-fill" style="width:' + pct + '%"></div></div>'
+        + '<span class="num">' + byIdeo[k] + '</span>'
+        + '</div>';
+    });
+    if (keys.length > 12) {
+      html += '<div class="muted" style="font-size:12.5px;text-align:center;margin-top:8px">仅显示前 12 个</div>';
+    }
+    el.innerHTML = html;
+  }
+
+  // 10 维平均画像（-100 ~ +100 居中轴）
+  function renderAxisChart(axisAvg) {
+    var el = $('axisChart');
+    if (!axisAvg) { el.innerHTML = '<div class="empty-note">暂无数据</div>'; return; }
+    var html = '';
+    AXIS_ORDER.forEach(function (k) {
+      var v = axisAvg[k];
+      var pos = typeof v === 'number' ? v : 0;
+      var absPct = Math.min(100, Math.abs(pos));   // 0~100 → 0~50% 的轨道宽度
+      var halfPct = absPct / 2;
+      var barHtml;
+      if (pos > 0) {
+        barHtml = '<div class="bar pos" style="width:' + halfPct + '%"></div>';
+      } else if (pos < 0) {
+        barHtml = '<div class="bar neg" style="width:' + halfPct + '%"></div>';
+      } else {
+        barHtml = '<div class="bar pos" style="width:0"></div>';
+      }
+      html += '<div class="axis-row">'
+        + '<span class="lbl">' + AXIS_NAMES[k] + '</span>'
+        + '<div class="axis-track"><span class="mid"></span>' + barHtml + '</div>'
+        + '<span class="val">' + (pos > 0 ? '+' : '') + pos.toFixed(1) + '</span>'
+        + '</div>';
+    });
+    el.innerHTML = html;
+  }
+
+  // 政府适配度等级分布
+  function renderGovChart(govGrades) {
+    var el = $('govChart');
+    var order = ['高度契合', '总体契合', '部分契合', '差异显著'];
+    var data = govGrades || {};
+    var total = order.reduce(function (s, g) { return s + (data[g] || 0); }, 0);
+    if (!total) { el.innerHTML = '<div class="empty-note">暂无数据</div>'; return; }
+    var max = 1;
+    order.forEach(function (g) { if ((data[g] || 0) > max) max = data[g]; });
+    var html = '';
+    order.forEach(function (g) {
+      var n = data[g] || 0;
+      var pct = Math.round(n / max * 100);
+      var share = Math.round(n / total * 100);
+      html += '<div class="gbar-row">'
+        + '<span class="lbl">' + g + '</span>'
+        + '<div class="gbar-track"><div class="gbar-fill" style="width:' + pct + '%"></div></div>'
+        + '<span class="num">' + n + ' 人 · ' + share + '%</span>'
+        + '</div>';
+    });
+    el.innerHTML = html;
+  }
+
+  // 近 14 天趋势（柱状）
+  function renderTrendChart(daily) {
+    var el = $('trendChart');
+    var days = daily || [];
+    if (!days.length) { el.innerHTML = '<div class="empty-note">暂无数据</div>'; return; }
+    var max = 1;
+    days.forEach(function (d) { if (d.count > max) max = d.count; });
+    var html = '<div class="trend-wrap">';
+    days.forEach(function (d) {
+      var h = Math.max(2, Math.round(d.count / max * 100));
+      html += '<div class="trend-col">'
+        + '<span class="trend-num">' + d.count + '</span>'
+        + '<div class="trend-bar" style="height:' + h + '%" title="' + d.date + '：' + d.count + ' 条"></div>'
+        + '<span class="trend-date">' + d.date + '</span>'
+        + '</div>';
+    });
+    html += '</div>';
+    el.innerHTML = html;
+  }
+
+  // ---------- 渲染：记录表格 ----------
+  function renderRecords(data) {
+    var rows = data.rows || [];
+    var tbody = $('recordBody');
+    $('recordInfo').textContent = '共 ' + data.total + ' 条记录 · 第 ' + data.page + ' / ' + state.totalPages + ' 页';
+    $('pageInfo').textContent = data.page + ' / ' + state.totalPages;
+
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="8" class="muted">暂无记录</td></tr>';
+    } else {
+      var html = '';
+      rows.forEach(function (r) {
+        var m = r.topMatch || {};
+        var sim = typeof m.similarity === 'number' ? Math.round(m.similarity * 100) + '%' : '-';
+        html += '<tr>'
+          + '<td>' + r.id + '</td>'
+          + '<td>' + escHtml(fmtTime(r.ts)) + '</td>'
+          + '<td>' + r.mode + ' 题</td>'
+          + '<td class="name">' + escHtml(r.username || '匿名') + '</td>'
+          + '<td class="name">' + escHtml(m.name || '-') + '</td>'
+          + '<td>' + sim + '</td>'
+          + '<td>' + (typeof r.govOverall === 'number' ? r.govOverall.toFixed(1) : '-') + '</td>'
+          + '<td>' + (r.govGrade ? '<span class="grade">' + escHtml(r.govGrade) + '</span>' : '-') + '</td>'
+          + '</tr>';
+      });
+      tbody.innerHTML = html;
+    }
+
+    $('prevPage').disabled = data.page <= 1;
+    $('nextPage').disabled = data.page >= state.totalPages;
+  }
+
+  function fmtTime(ts) {
+    if (!ts) return '-';
+    var s = String(ts);
+    // 截取到分钟：2026-08-19T10:30:00.123+08:00 → 2026-08-19 10:30
+    var m = s.match(/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})/);
+    return m ? m[1] + ' ' + m[2] : s;
+  }
+
+  function escHtml(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  // ---------- 分页 ----------
+  function goPage(p) {
+    if (p < 1 || p > state.totalPages) return;
+    state.page = p;
+    loadRecords();
+  }
+
+  // ---------- 导出 CSV（导出全部记录，逐页拉取） ----------
+  function exportCsv() {
+    var btn = $('exportBtn');
+    btn.disabled = true;
+    btn.textContent = '导出中…';
+
+    var all = [];
+    var page = 1;
+    var total = null;
+
+    function fetchPage() {
+      api('/admin/records' + queryStr({ token: state.token, page: page, size: 100 }))
+        .then(function (data) {
+          if (total === null) total = data.total;
+          all = all.concat(data.rows);
+          var fetched = page * data.size;
+          if (fetched < total && data.rows.length) {
+            page += 1;
+            fetchPage();
+          } else {
+            buildAndDownload(all);
+          }
+        })
+        .catch(function () {
+          btn.disabled = false;
+          btn.textContent = '导出 CSV';
+        });
+    }
+    fetchPage();
+  }
+
+  function buildAndDownload(rows) {
+    var header = ['ID', '时间', '模式', '用户名', '最贴近意识形态', '意识形态(英)', '匹配度',
+                  '政府适配度', '等级', 'ECON', 'SOC', 'PROG', 'GLOB', 'SEC', 'ECO', 'HIER', 'INDV', 'REV', 'PEACE'];
+    var lines = [header.join(',')];
+
+    rows.forEach(function (r) {
+      var m = r.topMatch || {};
+      var axes = r.axes || {};
+      var row = [
+        r.id, fmtTime(r.ts), r.mode, r.username || '匿名',
+        m.name || '', m.nameEn || '',
+        typeof m.similarity === 'number' ? (m.similarity * 100).toFixed(1) + '%' : '',
+        typeof r.govOverall === 'number' ? r.govOverall.toFixed(1) : '',
+        r.govGrade || ''
+      ];
+      AXIS_ORDER.forEach(function (k) {
+        var v = axes[k];
+        row.push(typeof v === 'number' ? v : '');
+      });
+      lines.push(row.map(csvCell).join(','));
+    });
+
+    var csv = '\uFEFF' + lines.join('\r\n');
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    var now = new Date();
+    var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
+    var stamp = now.getFullYear() + pad(now.getMonth() + 1) + pad(now.getDate());
+    a.href = url;
+    a.download = '答题记录_' + stamp + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+
+    $('exportBtn').disabled = false;
+    $('exportBtn').textContent = '导出 CSV';
+  }
+
+  function csvCell(v) {
+    var s = String(v == null ? '' : v);
+    if (/[",\n\r]/.test(s)) s = '"' + s.replace(/"/g, '""') + '"';
+    return s;
+  }
+
+  // ---------- 事件绑定 ----------
+  $('loginBtn').addEventListener('click', doLogin);
+  $('pwdInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') doLogin();
+  });
+  $('logoutBtn').addEventListener('click', doLogout);
+  $('prevPage').addEventListener('click', function () { goPage(state.page - 1); });
+  $('nextPage').addEventListener('click', function () { goPage(state.page + 1); });
+  $('exportBtn').addEventListener('click', exportCsv);
+
+  // ---------- 初始化 ----------
+  if (state.token) {
+    // 已有 token：先尝试获取数据，401 会自动跳回登录界面
+    showMain();
+    loadAll();
+  } else {
+    showLogin();
+    $('pwdInput').focus();
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,442 @@
+[
+  {
+    "id": 41,
+    "theme": "言论与表达边界",
+    "stem": "对于公开表达仇恨或侮辱特定群体的言论，国家应如何对待？",
+    "options": [
+      { "text": "国家应立法禁止仇恨言论，限制伤害群体尊严的表达", "scores": {"ECON": 0, "SOC": 3, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张以立法手段约束仇恨言论，通过公权力保护受针对群体的尊严。该立场强调国家对公共表达的管控与对社会秩序的价值导向。" },
+      { "text": "任何观点都可公开表达，哪怕令人不适，国家不应干预", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "坚持表达自由优先，反对国家以内容性质为由限制公共言论。该立场偏向最小干预与个人权利自主。" },
+      { "text": "私人平台可自行制定规则，政府不应立法限制", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "将内容规则交由市场与私营主体决定，强调私人空间自治。该立场弱化公权力与立法在表达领域的角色。" },
+      { "text": "社区与宗教道德应界定公共表达的边界", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 1, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以信仰与社群规范作为言论尺度，倾向于传统道德对公共空间的约束。该立场把表达边界交予集体性伦理权威。" }
+    ]
+  },
+  {
+    "id": 42,
+    "theme": "言论与表达边界",
+    "stem": "对于否认公认历史暴行的言论，社会应持何种态度？",
+    "options": [
+      { "text": "否认历史暴行的言论应受法律制裁", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "支持以公权力限制特定历史叙述，维护既定历史共识。该立场强调秩序与对权威叙事的保护。" },
+      { "text": "历史讨论应完全自由，即使争议性观点也不得禁止", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "主张历史议题向所有观点开放，反对以立法划定不可讨论的边界。该立场强调个人表达自主与最小干预。" },
+      { "text": "应由学术机构而非政府界定历史真伪", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把历史真伪的判断权交给专业精英群体，而非由政治权力裁决。该立场突出专业权威在知识领域的地位。" },
+      { "text": "国家应推广官方历史叙事以维护民族团结", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 2, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "主张由国家主导历史叙述，将统一叙事视为凝聚民族认同的手段。该立场体现民族整体优先与国家权威的结合。" }
+    ]
+  },
+  {
+    "id": 43,
+    "theme": "言论与表达边界",
+    "stem": "公民举行公开集会与示威，需要怎样的审批程序？",
+    "options": [
+      { "text": "任何集会都应事先获得政府许可，否则禁止", "scores": {"ECON": 0, "SOC": 3, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 2, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "将集会视为需国家事前授权的活动，强调秩序与对集体行动的管控。该立场偏向威权式公共管理。" },
+      { "text": "公民可自由集会，无需事前审批", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -2, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "视集会为天然权利，反对行政门槛。该立场倾向草根自发的公共参与与个人自主。" },
+      { "text": "集会自由，但破坏公共秩序者须承担后果", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在承认集会权同时保留对越界行为的追责。该立场属居中方案，兼顾权利与秩序。" },
+      { "text": "大型集会应以公共安全为由加强警力管控", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以安全为名强化国家在场，偏向对大规模集体表达的秩序管理。该立场依赖强制力量维持公共空间。" }
+    ]
+  },
+  {
+    "id": 44,
+    "theme": "言论与表达边界",
+    "stem": "对于亵渎或批评宗教信仰的公开表达，国家应如何回应？",
+    "options": [
+      { "text": "亵渎宗教应受法律惩罚以维护社会价值", "scores": {"ECON": 0, "SOC": 2, "PROG": 2, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把宗教尊严纳入法律保护，体现信仰权威对表达边界的界定。该立场强调宗教价值在公共领域的优先性。" },
+      { "text": "宗教与其他观点一样，批评不应受罚", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张宗教进入公共辩论不受特殊对待，倾向世俗化的平等表达。该立场强调个人批评自由与信仰中立。" },
+      { "text": "宗教团体可在私人领域自卫，国家不介入", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "将信仰争议限定在非公共领域，国家保持不干预姿态。该立场区分私人信仰与公共规制。" },
+      { "text": "世俗与无神论视角应在公共讨论中占主导", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": -3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "推动理性与世俗框架主导公共议题，弱化宗教在舆论场的位置。该立场强调世俗理性优先。" }
+    ]
+  },
+  {
+    "id": 45,
+    "theme": "言论与表达边界",
+    "stem": "对于冒犯性幽默与政治不正确的表达，平台与社会应如何处理？",
+    "options": [
+      { "text": "冒犯性内容助长偏见，平台应加以限制", "scores": {"ECON": 0, "SOC": 2, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "认为表达会影响社会态度，支持对可能伤害群体的内容施加约束。该立场强调平台治理与社会保护。" },
+      { "text": "幽默与讽刺属表达自由，不应规制", "scores": {"ECON": 0, "SOC": -3, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把讽刺纳入自由表达范畴，反对以外延伤害为由限制创作。该立场强调个人表达自主。" },
+      { "text": "受众用脚投票，靠市场而非法律约束", "scores": {"ECON": 2, "SOC": -2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张由消费者选择自然淘汰内容，弱化公权力与立法角色。该立场强调市场配置与个人选择。" },
+      { "text": "社区道德标准应约束公共表达", "scores": {"ECON": 0, "SOC": 1, "PROG": 2, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以既有道德规范衡量公开表达，倾向保守的价值秩序。该立场把表达边界交予集体性社区伦理。" }
+    ]
+  },
+  {
+    "id": 46,
+    "theme": "性少数权利",
+    "stem": "国家是否应承认同性婚姻？",
+    "options": [
+      { "text": "国家应承认同性婚姻，保障平等权利", "scores": {"ECON": 0, "SOC": -1, "PROG": -3, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": -2, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "将婚姻权扩展至同性伴侣，体现对平等与世俗制度的强调。该立场突出个人权利与反等级取向。" },
+      { "text": "婚姻应限于一男一女，由国家定义传统婚姻", "scores": {"ECON": 0, "SOC": 1, "PROG": 3, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以既有规范界定婚姻，倾向守成与宗教伦理对制度的塑造。该立场强调传统秩序。" },
+      { "text": "政府不应介入婚姻，交由宗教或私人团体", "scores": {"ECON": 1, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把婚姻回归非国家领域，兼顾私人自治与信仰团体的自主权。该立场倾向小政府与个人选择。" },
+      { "text": "提供民事结合等替代安排作为折中", "scores": {"ECON": 0, "SOC": 0, "PROG": -1, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以替代性法律安排回应诉求，介于完全承认与传统限定之间。该立场属渐进折中方案。" }
+    ]
+  },
+  {
+    "id": 47,
+    "theme": "性少数权利",
+    "stem": "关于个人性别认同与法定性别变更，应如何认定？",
+    "options": [
+      { "text": "个人可自主决定性别认同，法律应便利变更", "scores": {"ECON": 0, "SOC": -2, "PROG": -3, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "强调自我认知优先于外部登记，倾向个人自主与制度便利。该立场突出个人对身份的决定地位。" },
+      { "text": "性别由生物决定，法律应固定为出生性别", "scores": {"ECON": 0, "SOC": 1, "PROG": 3, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以生理特征作为法定依据，体现对传统自然秩序的坚守。该立场强调守成与既有规范。" },
+      { "text": "经医疗与心理评估后由国家审慎认定", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "设立专业与行政门槛，将认定权交予专家与国家机构。该立场强调审慎管控与权威裁定。" },
+      { "text": "社会应包容多元，但公共设施按生理性别划分", "scores": {"ECON": 0, "SOC": 1, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在态度上包容但在空间规则上保留生理标准，属混合取向。该立场兼顾开放与传统划分。" }
+    ]
+  },
+  {
+    "id": 48,
+    "theme": "性少数权利",
+    "stem": "学校课程是否应包含性少数相关内容？",
+    "options": [
+      { "text": "学校应教授性少数相关内容以促进包容", "scores": {"ECON": 0, "SOC": -1, "PROG": -3, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "将多元内容纳入公共教育，强调世俗与平权的社会化目标。该立场突出进步主义价值导向。" },
+      { "text": "性教育应由家庭与宗教团体主导，学校不涉入", "scores": {"ECON": 0, "SOC": 1, "PROG": 3, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把相关教育从公立体系移出，交予家庭与信仰权威。该立场强调家庭自主与宗教伦理。" },
+      { "text": "家长有权选择子女是否参与相关课程", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "以家长选择权为核心，弱化国家统一课程的强制力。该立场突出家庭与个人在教育中的决定权。" },
+      { "text": "国家统一课程避免争议，对相关内容淡化处理", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 1, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以中立包装回避分歧，体现国家对文化争议的回避姿态。该立场倾向民族整体主义的稳妥处理。" }
+    ]
+  },
+  {
+    "id": 49,
+    "theme": "性少数权利",
+    "stem": "在就业与参军中，能否基于性取向或性别认同区别对待？",
+    "options": [
+      { "text": "禁止一切基于性取向与性别认同的歧视", "scores": {"ECON": 0, "SOC": -1, "PROG": -3, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -2, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张在公共与职场领域一律平等，强调去等级的反歧视。该立场突出个人权利与平等主义。" },
+      { "text": "雇主与军队有权基于传统价值设定要求", "scores": {"ECON": 0, "SOC": 1, "PROG": 2, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "承认用人方依价值取舍的权利，倾向传统与权威秩序。该立场强调组织自主与既有规范。" },
+      { "text": "私人部门可自主决定，公共部门须平等", "scores": {"ECON": 1, "SOC": 0, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "在私营领域保留市场自由，在公权力领域落实平等。该立场区分私人选择与国家义务。" },
+      { "text": "宗教组织可豁免反歧视法", "scores": {"ECON": 0, "SOC": 0, "PROG": 2, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以信仰自由为由允许宗教团体偏离普遍反歧视规则。该立场强调宗教权威的特殊地位。" }
+    ]
+  },
+  {
+    "id": 50,
+    "theme": "性少数权利",
+    "stem": "公众场合的性少数身份展示与 Pride 活动，国家应持何立场？",
+    "options": [
+      { "text": "公开庆祝性少数身份是正当的表达自由", "scores": {"ECON": 0, "SOC": -2, "PROG": -3, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把身份展演纳入公共表达权，强调可见性与自主。该立场突出个人表达与进步主义取向。" },
+      { "text": "此类公开活动有违公共道德，应受限制", "scores": {"ECON": 0, "SOC": 2, "PROG": 3, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以公共道德为由约束公开表达，倾向保守的价值管控。该立场强调传统秩序对公共空间的约束。" },
+      { "text": "个人可私下认同，但不宜公共展演", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在认可个人身份的同时主张公开空间的克制，属温和保守。该立场兼顾包容与克制。" },
+      { "text": "国家应中立，既不鼓励也不禁止", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张公权力对身份表达保持不偏不倚的距离。该立场倾向中性治理而非价值引导。" }
+    ]
+  },
+  {
+    "id": 51,
+    "theme": "堕胎与身体自主",
+    "stem": "关于堕胎的法律地位，应如何规定？",
+    "options": [
+      { "text": "女性对自己的身体拥有完全决定权，堕胎应合法", "scores": {"ECON": 0, "SOC": -3, "PROG": -3, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "以身体自主权为核心，强调个人对生育事务的决定地位。该立场突出个人自主与世俗取向。" },
+      { "text": "生命始于受孕，堕胎等同谋杀，应全面禁止", "scores": {"ECON": 0, "SOC": 2, "PROG": 3, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以生命起点界定胎儿地位，体现宗教伦理对生命的绝对保护。该立场强调传统与信仰权威。" },
+      { "text": "允许早期堕胎但后期须受限制", "scores": {"ECON": 0, "SOC": -1, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "按孕期阶段划分边界，属兼顾自主与保护的中间立场。该立场采取渐进式分界。" },
+      { "text": "由宗教与社区共识决定是否合法", "scores": {"ECON": 0, "SOC": 1, "PROG": 2, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 1, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "把合法性的判断交予信仰与本地共识，弱化全国统一法。该立场强调社群集体的伦理裁定。" }
+    ]
+  },
+  {
+    "id": 52,
+    "theme": "堕胎与身体自主",
+    "stem": "国家对避孕与生育控制的政策应怎样？",
+    "options": [
+      { "text": "国家应广泛提供免费避孕，尊重个人规划", "scores": {"ECON": -1, "SOC": -2, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以公共供给降低门槛，体现福利取向与个人自主并重。该立场强调国家提供与私人规划。" },
+      { "text": "避孕违背自然秩序，国家不应推广", "scores": {"ECON": 0, "SOC": 0, "PROG": 3, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以自然与信仰秩序否定国家推广避孕的角色。该立场强调传统与宗教伦理。" },
+      { "text": "避孕属私人事务，由市场供应即可", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张去国家化，由需求与供给自然满足。该立场突出市场自由与个人选择。" },
+      { "text": "鼓励生育以维护民族人口", "scores": {"ECON": 1, "SOC": 0, "PROG": 2, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以人口与民族存续为目标，倾向鼓励而非限制生育。该立场体现民族整体优先的集体取向。" }
+    ]
+  },
+  {
+    "id": 53,
+    "theme": "堕胎与身体自主",
+    "stem": "关于辅助生殖与试管婴儿技术，国家应如何定位？",
+    "options": [
+      { "text": "个人有权使用辅助生殖技术", "scores": {"ECON": 0, "SOC": -2, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把生育技术视作个人可自主使用的选择，强调自主。该立场突出个人对生育事务的决定权。" },
+      { "text": "仅婚姻内夫妻可使用，且有宗教伦理限制", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以婚姻与信仰框架约束技术适用对象与方式。该立场强调传统制度对技术的限定。" },
+      { "text": "国家应规范以防范伦理风险", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张以监管平衡技术自由与潜在伦理问题。该立场强调国家权威在新兴领域的管控。" },
+      { "text": "技术应自由市场化，由需求决定", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "倾向减少管制，让市场配置生殖技术服务。该立场突出市场自由与私人选择。" }
+    ]
+  },
+  {
+    "id": 54,
+    "theme": "堕胎与身体自主",
+    "stem": "关于安乐死与医助死亡，法律应持何态度？",
+    "options": [
+      { "text": "成年人有权选择有尊严地结束生命", "scores": {"ECON": 0, "SOC": -3, "PROG": -3, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "以自主与尊严为核心，支持个人对生命终点的决定。该立场突出个人自主与进步取向。" },
+      { "text": "生命神圣，任何形式的协助死亡都禁止", "scores": {"ECON": 0, "SOC": 0, "PROG": 2, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以信仰界定生命不可让渡，否定协助死亡的合法性。该立场强调宗教权威与传统秩序。" },
+      { "text": "严格条件下可由医疗评估批准", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "设置专业门槛，将决定权交予医疗与行政审核。该立场采取审慎管控的居中安排。" },
+      { "text": "交由个人与家庭决定，国家不介入", "scores": {"ECON": 0, "SOC": -1, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把终局决定留于亲密关系内部，弱化国家角色。该立场强调个人与家庭的自主空间。" }
+    ]
+  },
+  {
+    "id": 55,
+    "theme": "堕胎与身体自主",
+    "stem": "未成年人的医疗同意与身体改造，谁有决定权？",
+    "options": [
+      { "text": "未成年人对自身医疗应有更多自主权", "scores": {"ECON": 0, "SOC": -2, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "提升未成年人的自主地位，弱化家长与国家的绝对决定权。该立场突出个体权利取向。" },
+      { "text": "父母与国家对未成年人身体有决定权", "scores": {"ECON": 0, "SOC": 1, "PROG": 2, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 2, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "强调监护与公权力对未成年人身体的保护与管理。该立场体现家长与国家整体权威。" },
+      { "text": "重大医疗须父母同意，常规可由少年参与", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "按事务轻重分配同意权，属分层的中间安排。该立场兼顾保护与个人参与。" },
+      { "text": "宗教豁免下父母可拒绝某些医疗", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以信仰自由允许家长偏离常规医疗要求。该立场强调宗教权威对家庭决定的影响。" }
+    ]
+  },
+  {
+    "id": 56,
+    "theme": "毒品与成瘾物质管制",
+    "stem": "关于娱乐性毒品，国家的恰当政策是什么？",
+    "options": [
+      { "text": "成年人可自主决定身体摄入，毒品应去罪化", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "以个人对身体处分的自由为核心，反对刑事化路径。该立场突出个人自主与最小干预。" },
+      { "text": "毒品危害社会，国家应严刑打击", "scores": {"ECON": 0, "SOC": 3, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "强调国家以强力手段压制毒品流通，维护秩序。该立场体现威权式强硬执法。" },
+      { "text": "可医用并管制销售，由国家垄断经营", "scores": {"ECON": -1, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以国家专营限定供应，兼顾控制与公共提供。该立场强调国家垄断与管控。" },
+      { "text": "由市场自由供应，国家不干预", "scores": {"ECON": 2, "SOC": -2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张彻底去管制，让供需自行决定市场。该立场突出市场自由与个人选择。" }
+    ]
+  },
+  {
+    "id": 57,
+    "theme": "毒品与成瘾物质管制",
+    "stem": "对于成瘾者，应视为病人还是罪犯？",
+    "options": [
+      { "text": "成瘾是健康问题，应以治疗替代刑罚", "scores": {"ECON": -1, "SOC": -2, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把成瘾纳入公共医疗框架，倾向福利式干预。该立场强调以治疗替代惩罚。" },
+      { "text": "吸毒违法，须以刑罚威慑", "scores": {"ECON": 0, "SOC": 2, "PROG": 2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以惩罚作为遏制手段，强调个人责任与秩序。该立场体现强硬执法取向。" },
+      { "text": "宗教挽救心灵，教会应主导戒毒", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把戒断交予信仰团体，侧重灵性层面的转变。该立场强调宗教权威在康复中的角色。" },
+      { "text": "个人责任优先，国家仅提供信息", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "弱化国家强制，把后果归于个人选择。该立场突出个人责任与最小干预。" }
+    ]
+  },
+  {
+    "id": 58,
+    "theme": "毒品与成瘾物质管制",
+    "stem": "关于大麻的管制，应采取哪种立场？",
+    "options": [
+      { "text": "大麻应像烟酒一样合法并管制", "scores": {"ECON": 1, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以成熟管制物为参照，倾向有限合法化与税收监管。该立场采取务实的市场化监管。" },
+      { "text": "大麻仍属毒品，须禁止", "scores": {"ECON": 0, "SOC": 2, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "维持禁令，将大麻与其他毒品等量齐观。该立场强调严格管控与传统秩序。" },
+      { "text": "成人可私人持有，禁止公开销售", "scores": {"ECON": 0, "SOC": -2, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "在私人领域放宽、在公共流通上收紧，属折中。该立场突出私人领域的个人自由。" },
+      { "text": "药用合法，娱乐仍禁", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以医疗用途为切口有限开放，保留对娱乐的禁止。该立场采取分级管控。" }
+    ]
+  },
+  {
+    "id": 59,
+    "theme": "毒品与成瘾物质管制",
+    "stem": "关于赌博，国家应持何种政策？",
+    "options": [
+      { "text": "成年人有权赌博，国家可征税并监管", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "承认成人娱乐并纳入税收框架，倾向市场化监管。该立场突出市场自由与国家抽税。" },
+      { "text": "赌博引发家庭与社会问题，应禁止", "scores": {"ECON": 0, "SOC": 2, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以社会成本为由主张禁止，强调保护秩序。该立场体现威权式管控倾向。" },
+      { "text": "国家可经营博彩以充实财政", "scores": {"ECON": -1, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "由国家垄断供应并取利，体现公营博彩逻辑。该立场强调国家与集体财政利益。" },
+      { "text": "宗教伦理反对，应限制", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以信仰价值约束博彩活动，倾向限制供给。该立场强调宗教伦理对行为的限定。" }
+    ]
+  },
+  {
+    "id": 60,
+    "theme": "毒品与成瘾物质管制",
+    "stem": "关于酒精与烟草，国家应怎样定位？",
+    "options": [
+      { "text": "成年人有消费自由，仅作健康提示", "scores": {"ECON": 0, "SOC": -2, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "以信息替代禁令，强调成人自主选择。该立场突出个人自由与最小干预。" },
+      { "text": "国家应提高税收限制消费以护公共卫生", "scores": {"ECON": -2, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以财政与规制手段抑制需求，体现家长式公共卫生。该立场强调国家干预与保护。" },
+      { "text": "完全禁酒以维护社会秩序", "scores": {"ECON": 0, "SOC": 2, "PROG": 2, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以禁绝方式处理致瘾物，倾向强管控与道德秩序。该立场体现威权式禁绝取向。" },
+      { "text": "市场自由供应，责任在个人", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张去规制，把健康后果归于个人。该立场突出市场自由与个人责任。" }
+    ]
+  },
+  {
+    "id": 61,
+    "theme": "宗教在公共领域的角色",
+    "stem": "公立学校能否进行祈祷或展示宗教符号？",
+    "options": [
+      { "text": "公立学校可进行非宗派祈祷或展示传统符号", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 1, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在公立机构保留温和的宗教痕迹，倾向传统与本土认同。该立场强调文化延续与信仰空间。" },
+      { "text": "公立机构应保持世俗，不得有任何宗教符号", "scores": {"ECON": 0, "SOC": -1, "PROG": -2, "GLOB": 0, "SEC": -3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "严格区分公权力与信仰，强调制度性世俗。该立场突出世俗理性优先。" },
+      { "text": "允许学生自愿的私人宗教表达", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在个人层面保留信仰空间，但不进入公共仪式。该立场区分私人信仰与公共制度。" },
+      { "text": "由地方社区多数决定", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 1, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把符号问题交予本地多数，倾向地方与多数决。该立场强调地方社群的自主裁定。" }
+    ]
+  },
+  {
+    "id": 62,
+    "theme": "宗教在公共领域的角色",
+    "stem": "宗教法在家庭与继承事务中是否具有法律效力？",
+    "options": [
+      { "text": "个人可选择按宗教法处理婚姻继承", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "允许信仰法在特定领域并行，强调社群自治与个人选择。该立场突出宗教权威与私人自主。" },
+      { "text": "民法统一适用，宗教法不具法律效力", "scores": {"ECON": 0, "SOC": 0, "PROG": -1, "GLOB": 0, "SEC": -3, "ECO": 0, "HIER": -2, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张单一世俗法秩序，否定信仰法的强制地位。该立场突出世俗理性与平等主义。" },
+      { "text": "宗教社区内部事务尊重传统", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "在社群内部保留传统规则，限制其向外扩张。该立场强调宗教社群的集体自治。" },
+      { "text": "国家以世俗法保障平等，限制宗教特权", "scores": {"ECON": 0, "SOC": 0, "PROG": -1, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": -1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以防不平等为由削弱宗教法的适用空间。该立场突出世俗平等与反等级取向。" }
+    ]
+  },
+  {
+    "id": 63,
+    "theme": "宗教在公共领域的角色",
+    "stem": "宗教团体是否应享受税收优惠？",
+    "options": [
+      { "text": "宗教团体应享免税，因其有公益贡献", "scores": {"ECON": -1, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以公益属性支持免税，体现对信仰组织的财政优待。该立场强调宗教团体的特殊地位。" },
+      { "text": "所有组织一视同仁征税，政教分离", "scores": {"ECON": 1, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张税制中立，切断公权力与信仰的经济牵连。该立场突出世俗化与平等对待。" },
+      { "text": "宗教慈善可抵税但须透明", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在透明前提下给予有限优惠，属折中。该立场兼顾承认与约束。" },
+      { "text": "宗教不应参与公共慈善，专注灵性", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张信仰退回私人领域，弱化其公共职能。该立场强调宗教的私人化定位。" }
+    ]
+  },
+  {
+    "id": 64,
+    "theme": "宗教在公共领域的角色",
+    "stem": "公共日历与法定假日应如何对待宗教节日？",
+    "options": [
+      { "text": "国家应承认主要宗教节日为公假", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 1, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以公假确认主流信仰地位，体现传统与民族习尚。该立场强调宗教符号的国家认可。" },
+      { "text": "公共日历应世俗中立，不特惠任何宗教", "scores": {"ECON": 0, "SOC": 0, "PROG": -1, "GLOB": 0, "SEC": -2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张中立日历，避免公权力偏向特定信仰。该立场突出世俗理性与平等。" },
+      { "text": "多元节日轮流放假彰显包容", "scores": {"ECON": 0, "SOC": 0, "PROG": -1, "GLOB": -1, "SEC": -1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以多元安排平衡各群体，倾向开放包容。该立场强调全球主义式的文化共存。" },
+      { "text": "以本国主流传统为准", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 2, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以本土多数传统界定假日，强调民族认同。该立场体现民族主义式的文化优先。" }
+    ]
+  },
+  {
+    "id": 65,
+    "theme": "宗教在公共领域的角色",
+    "stem": "宗教价值观应在立法中占据多大权重？",
+    "options": [
+      { "text": "宗教价值观应在立法中有重要地位", "scores": {"ECON": 0, "SOC": 0, "PROG": 2, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张信仰进入法律渊源，强化宗教对规则的塑造。该立场突出宗教权威与传统主义。" },
+      { "text": "立法应基于世俗理性，宗教为个人信仰", "scores": {"ECON": 0, "SOC": 0, "PROG": -2, "GLOB": 0, "SEC": -3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把立法根基于理性与公共理由，剥离信仰权威。该立场强调世俗理性优先。" },
+      { "text": "宗教群体可游说但无制度特权", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": -1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "允许信仰群体参与政治，但不赋予其超然地位。该立场区分普通参与与制度特权。" },
+      { "text": "多数信仰共同体可塑造公共道德", "scores": {"ECON": 0, "SOC": 0, "PROG": 2, "GLOB": 1, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以多数信仰界定道德基线，倾向共识式保守。该立场强调宗教社群对公共道德的塑造。" }
+    ]
+  },
+  {
+    "id": 66,
+    "theme": "个人生活方式的国家干预边界",
+    "stem": "成人间自愿的性交易与多伴侣关系，国家应否干预？",
+    "options": [
+      { "text": "成年人自愿行为国家不应干预", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "以自愿与成人自主为前提，否定公权力介入私生活。该立场突出个人自由与最小干预。" },
+      { "text": "国家应维护婚姻与家庭伦理，限制性工作", "scores": {"ECON": 0, "SOC": 2, "PROG": 3, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以家庭伦理为基准，主张对性交易施加约束。该立场强调家庭集体价值与传统秩序。" },
+      { "text": "性工作可合法化并监管以保护从业者", "scores": {"ECON": 0, "SOC": -1, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以有限合法化降低伤害，兼顾自主与保护。该立场采取务实折中监管。" },
+      { "text": "宗教道德应约束公共性道德", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 2, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把性道德交予信仰框架，倾向保守约束。该立场强调宗教伦理对公共行为的限定。" }
+    ]
+  },
+  {
+    "id": 67,
+    "theme": "个人生活方式的国家干预边界",
+    "stem": "公共场合的着装，国家应否作出规定？",
+    "options": [
+      { "text": "个人着装自由，国家不得规定", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把着装视为个人表达，反对公权力设限。该立场突出个人自由与最小干预。" },
+      { "text": "公共场合应规定得体着装以维秩序", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以公共秩序为由设定着装基准，倾向管控。该立场强调权威秩序对公共空间的要求。" },
+      { "text": "宗教服饰可在公共领域自由穿戴", "scores": {"ECON": 0, "SOC": -1, "PROG": -1, "GLOB": 0, "SEC": -1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "保障信仰相关的着装选择，强调世俗包容。该立场突出宗教表达自由。" },
+      { "text": "国家应限制具宗教政治象征的服饰", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 1, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以公共安全或世俗主义限制特定符号，偏向国家中性。该立场体现民族主义式的符号管控。" }
+    ]
+  },
+  {
+    "id": 68,
+    "theme": "个人生活方式的国家干预边界",
+    "stem": "关于饮食选择，国家应介入到何种程度？",
+    "options": [
+      { "text": "个人饮食完全自由，国家不干预", "scores": {"ECON": 0, "SOC": -2, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把饮食视作私人偏好，反对规制。该立场突出个人自由与最小干预。" },
+      { "text": "应推广健康饮食，对不健康食品征税", "scores": {"ECON": -2, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以健康目标使用财税手段，体现家长式引导。该立场强调国家干预与公共卫生保护。" },
+      { "text": "宗教饮食法应受尊重并在公共餐饮提供", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在公共供给中容纳信仰饮食，强调尊重。该立场突出宗教伦理的制度容纳。" },
+      { "text": "国家以本国传统饮食文化为准", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以民族饮食传统为基准，体现文化优先。该立场强调民族主义式的文化保护。" }
+    ]
+  },
+  {
+    "id": 69,
+    "theme": "个人生活方式的国家干预边界",
+    "stem": "父母教育子女的方式（如体罚、在家上学），国家应否规范？",
+    "options": [
+      { "text": "父母有权按自身价值观教育子女，包括在家上学", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "强调家庭与父母的教养主权，弱化国家统一要求。该立场突出家庭自主与传统取向。" },
+      { "text": "国家设最低标准，禁止体罚等伤害", "scores": {"ECON": 0, "SOC": 1, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以儿童保护设定底线，体现公权力对家庭的介入。该立场突出进步主义式的权利保护。" },
+      { "text": "教育完全交由家庭与社区", "scores": {"ECON": 0, "SOC": -2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把教育从国家体系移出，倾向去中心化。该立场强调家庭与社区的个人空间。" },
+      { "text": "国家主导义务教育以培养公民", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 1, "SEC": 0, "ECO": 0, "HIER": 2, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以统一义务教育塑造公民，强调国家在教育中的角色。该立场体现国家集体权威。" }
+    ]
+  },
+  {
+    "id": 70,
+    "theme": "个人生活方式的国家干预边界",
+    "stem": "关于自愿绝育，法律应持何态度？",
+    "options": [
+      { "text": "成年人可自主决定绝育，无需审批", "scores": {"ECON": 0, "SOC": -3, "PROG": -3, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "以身体与生育自主为核心，反对前置审查。该立场突出个人自主与进步取向。" },
+      { "text": "国家应鼓励生育，限制非医疗绝育", "scores": {"ECON": 0, "SOC": 1, "PROG": 2, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以人口与民族存续为由限制个人放弃生育。该立场体现民族主义式的集体人口优先。" },
+      { "text": "医疗评估后批准，防范非自愿", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "设置医疗门槛以平衡自主与防范，居中。该立场强调专业权威的审慎管控。" },
+      { "text": "宗教反对，国家应禁止非治疗性绝育", "scores": {"ECON": 0, "SOC": 0, "PROG": 2, "GLOB": 0, "SEC": 3, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以信仰界定生育义务，禁止非治疗性终止。该立场强调宗教权威对传统秩序的维护。" }
+    ]
+  },
+  {
+    "id": 71,
+    "theme": "审查与平台治理",
+    "stem": "社交媒体平台应如何进行内容审核？",
+    "options": [
+      { "text": "平台应主动删除虚假与有害信息", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "支持平台主动治理，强调对信息环境的维护。该立场体现威权式内容管控取向。" },
+      { "text": "平台应最大限度保护言论，少审查", "scores": {"ECON": 0, "SOC": -3, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "倾向表达优先，反对平台过度删帖。该立场突出个人表达自由与最小干预。" },
+      { "text": "政府立法要求平台承担审核义务", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把审核责任法定化，强化国家与平台联动。该立场强调公权力对信息空间的管控。" },
+      { "text": "由独立第三方标准组织制定规则", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以非国家专业机构定标准，弱化平台与国家单方权力。该立场强调专业权威的中介治理。" }
+    ]
+  },
+  {
+    "id": 72,
+    "theme": "审查与平台治理",
+    "stem": "对于外国媒体与跨境内容流入，国家应否设限？",
+    "options": [
+      { "text": "国家应限制外国媒体以保护本土文化", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 3, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以文化安全为由管控跨境信息，强调民族边界。该立场体现民族主义式的文化保护。" },
+      { "text": "信息自由流动，不应设国界限制", "scores": {"ECON": 0, "SOC": -2, "PROG": -1, "GLOB": -3, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张全球开放的信息空间，弱化国家过滤。该立场突出全球主义与表达自由。" },
+      { "text": "市场决定，用户自主选择", "scores": {"ECON": 2, "SOC": 0, "PROG": 0, "GLOB": -1, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以供需与消费选择配置内容，去规制。该立场强调市场自由与全球信息流动。" },
+      { "text": "关键媒体须本国资本控制", "scores": {"ECON": -1, "SOC": 0, "PROG": 0, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以资本归属保障信息主权，倾向国家与本土控制。该立场体现民族主义式的集体管控。" }
+    ]
+  },
+  {
+    "id": 73,
+    "theme": "审查与平台治理",
+    "stem": "关于深度伪造与 AI 生成内容，应如何监管？",
+    "options": [
+      { "text": "国家应强制标识并限制滥用", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张法定标识义务，以公权力遏制滥用风险。该立场强调国家权威在前沿技术的管控。" },
+      { "text": "技术自由发展，用户自辨真伪", "scores": {"ECON": 0, "SOC": -2, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "倾向技术自由，把鉴别责任交予受众。该立场突出个人自主与最小干预。" },
+      { "text": "平台自担责任，政府不前置审查", "scores": {"ECON": 1, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以平台事后责任替代事前审查，市场化取向。该立场强调私人责任与去规制。" },
+      { "text": "由行业自律规范", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "主张业内自行制定准则，弱化外部强制。该立场强调行业自身的等级式自律。" }
+    ]
+  },
+  {
+    "id": 74,
+    "theme": "审查与平台治理",
+    "stem": "儿童可访问的线上内容，应如何分级？",
+    "options": [
+      { "text": "国家应强制年龄分级与过滤", "scores": {"ECON": 0, "SOC": 2, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以法定分级保护未成年人，强调国家角色。该立场体现威权式内容管控。" },
+      { "text": "家长自行管理，国家不强制", "scores": {"ECON": 0, "SOC": -2, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把管理权交还家庭，反对统一强制。该立场突出家庭自主与最小干预。" },
+      { "text": "平台自愿分级，市场竞争", "scores": {"ECON": 1, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以市场激励推动分级，去国家化。该立场强调市场自由与私人供给。" },
+      { "text": "宗教价值指导内容适宜性", "scores": {"ECON": 0, "SOC": 0, "PROG": 1, "GLOB": 0, "SEC": 1, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以信仰标准界定适宜内容，倾向保守。该立场强调宗教伦理的约束作用。" }
+    ]
+  },
+  {
+    "id": 75,
+    "theme": "审查与平台治理",
+    "stem": "关于政治广告与竞选传播，应如何规范？",
+    "options": [
+      { "text": "应限制政治广告金额以防资本操控", "scores": {"ECON": -2, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -2, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以限额削弱财富对政治的影响，倾向平等。该立场突出经济与身份上的平等主义。" },
+      { "text": "竞选言论自由，不限金额", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把竞选开支纳入自由表达，反对设限。该立场强调个人表达自由与市场逻辑。" },
+      { "text": "国家监管确保透明但允自由", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以透明替代限额，居中监管。该立场强调国家权威的适度介入。" },
+      { "text": "本国政治优先，限制外国影响", "scores": {"ECON": 0, "SOC": 0, "PROG": 0, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以民族政治边界排除外部干预，强调主权。该立场体现民族主义式的集体管控。" }
+    ]
+  },
+  {
+    "id": 76,
+    "theme": "隐私与国家监控",
+    "stem": "关于公共场所的监控摄像头，国家应怎样部署？",
+    "options": [
+      { "text": "广泛部署摄像头以维护治安", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 1, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以密集监控提升安全，强调秩序与管控。该立场体现威权式国家监控取向。" },
+      { "text": "限制监控，保护公众隐私自由", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把隐私置于安全之上，反对普遍监控。该立场突出个人自由与最小干预。" },
+      { "text": "在犯罪高发区加强，他处克制", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "按风险分配监控密度，属比例原则运用。该立场采取差异化的务实管控。" },
+      { "text": "由社区决定本地监控密度", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "把监控决策下放社区，弱化集中控制。该立场强调地方自治与去中心化。" }
+    ]
+  },
+  {
+    "id": 77,
+    "theme": "隐私与国家监控",
+    "stem": "关于通信监听与数据留存，法律应如何规定？",
+    "options": [
+      { "text": "国家安全下可强制留存与监听", "scores": {"ECON": 0, "SOC": 3, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以安全为由扩大监控权，倾向国家优先。该立场体现威权式的安全管控。" },
+      { "text": "须司法令状，严格保护隐私", "scores": {"ECON": 0, "SOC": -3, "PROG": -1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": -1, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "以司法门槛约束监听，强调隐私与程序。该立场突出个人自由与制度限权。" },
+      { "text": "企业配合但须透明报告", "scores": {"ECON": 1, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "在协作中引入透明，平衡安全与企业角色。该立场强调市场主体的协同配合。" },
+      { "text": "以反恐为由扩大无令状监控", "scores": {"ECON": 0, "SOC": 2, "PROG": 0, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以反恐放宽授权要求，强化国家监控能力。该立场体现民族主义式的安全优先与强硬取向。" }
+    ]
+  },
+  {
+    "id": 78,
+    "theme": "隐私与国家监控",
+    "stem": "关于健康与疫情追踪数据，国家应怎样收集？",
+    "options": [
+      { "text": "紧急状况下国家可追踪以护公共健康", "scores": {"ECON": -1, "SOC": 2, "PROG": 1, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以公共卫生为目标允许追踪，体现家长式干预。该立场强调国家与集体健康的优先级。" },
+      { "text": "个人健康数据属隐私，国家不得收集", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -2, "REV": 0, "PEACE": 0}, "analysis": "把健康信息列为不可让渡隐私，反对公权力收集。该立场突出个人自主与最小干预。" },
+      { "text": "自愿参与，匿名汇总", "scores": {"ECON": 0, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以同意与匿名降低侵犯，居中方案。该立场兼顾个人同意与公共需求。" },
+      { "text": "民族人口健康优先，强制接种登记", "scores": {"ECON": 0, "SOC": 1, "PROG": 1, "GLOB": 2, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 1, "REV": 0, "PEACE": 0}, "analysis": "以人口健康与民族存续为由强化登记，倾向强制。该立场体现民族主义式的集体健康管控。" }
+    ]
+  },
+  {
+    "id": 79,
+    "theme": "隐私与国家监控",
+    "stem": "关于数字身份与上网实名，应如何推行？",
+    "options": [
+      { "text": "推行全国统一数字身份便于治理", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 1, "SEC": 0, "ECO": 0, "HIER": 2, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以统一身份提升治理效率，强调集中与可识别。该立场突出国家权威与等级秩序。" },
+      { "text": "匿名上网是基本自由，反对强制实名", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把匿名视为自由前提，反对身份绑定。该立场突出个人自由与最小干预。" },
+      { "text": "特定场景实名，一般匿名", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "按场景区分实名强度，属分层管理。该立场采取差异化的务实安排。" },
+      { "text": "由市场提供身份认证服务", "scores": {"ECON": 2, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把身份服务交予私营部门，去国家化。该立场强调市场自由与私人供给。" }
+    ]
+  },
+  {
+    "id": 80,
+    "theme": "隐私与国家监控",
+    "stem": "关于加密通信，国家应否要求预留后门？",
+    "options": [
+      { "text": "国家应要求加密留后门以侦查犯罪", "scores": {"ECON": 0, "SOC": 3, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以执法便利为由削弱加密，倾向国家可介入。该立场体现威权式的安全管控。" },
+      { "text": "强加密不可弱化，隐私优先", "scores": {"ECON": 0, "SOC": -3, "PROG": -2, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "主张加密完整不可妥协，把隐私置于侦查之上。该立场突出个人自由与最小干预。" },
+      { "text": "仅在重大案件经司法授权破译", "scores": {"ECON": 0, "SOC": 1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 1, "INDV": 0, "REV": 0, "PEACE": 0}, "analysis": "以司法门槛限定破译，居中平衡。该立场强调程序约束下的国家权威。" },
+      { "text": "企业自决技术路线", "scores": {"ECON": 1, "SOC": -1, "PROG": 0, "GLOB": 0, "SEC": 0, "ECO": 0, "HIER": 0, "INDV": -1, "REV": 0, "PEACE": 0}, "analysis": "把加密策略交予企业，弱化国家指令。该立场强调市场主体的技术自主。" }
+    ]
+  }
+]

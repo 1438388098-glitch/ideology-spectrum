@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>意识形态光谱 · 全球意识形态测试与分析</title>
+  <meta name="description" content="系统化收集与介绍全球主要意识形态，并提供 200 道题目的意识形态判断与分析测试。" />
+  <link rel="stylesheet" href="css/styles.css?v=20260819d" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark">◎</span>
+        <span class="brand-text">意识形态光谱</span>
+      </div>
+      <nav class="main-nav" id="mainNav">
+        <button class="nav-link active" data-view="home">首页</button>
+        <button class="nav-link" data-view="catalog">意识形态分类</button>
+        <button class="nav-link" data-view="test">开始测试</button>
+        <button class="nav-link" data-view="compare">对比说明</button>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" title="切换白天/夜间模式">🌙</button>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">☰</button>
+    </div>
+  </header>
+
+  <main class="container" id="main">
+
+    <!-- 首页 / 概览 -->
+    <section class="view active" id="view-home">
+      <div class="hero">
+        <h1>理解意识形态的地图</h1>
+        <p class="hero-sub">
+          一个系统化收集与介绍全球主要意识形态的平台，并通过一套
+          <strong>50 / 100 / 200 题三档可选</strong>的判断测试，帮助你定位自己在经济、社会、文化、生态等维度上的立场。
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-goto="test">开始测试 →</button>
+          <button class="btn btn-ghost" data-goto="catalog">浏览意识形态</button>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>分类介绍</h3>
+          <p>自由主义、保守主义、社会主义、共产主义、无政府主义、法西斯主义、民族主义、女权主义、环保主义、宗教原教旨主义等，逐一定义、主张与代表人物。</p>
+        </div>
+        <div class="feature-card">
+          <h3>三档题量的测试</h3>
+          <p>50 / 100 / 200 题可选，逐题作答，覆盖经济、社会、文化、平权环保、权力秩序五大主题；答完后统一展示每题所选选项对应的意识形态倾向解析。</p>
+        </div>
+        <div class="feature-card">
+          <h3>结果分析与对比</h3>
+          <p>基于 10 个维度量化你的立场，给出最贴近的意识形态匹配，并与各流派进行逐项对比。</p>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>内容说明：</strong>本站对各意识形态仅作客观、描述性介绍，不代表对任何立场的倡导或否定。政治光谱是连续的，标签只是近似。
+      </div>
+    </section>
+
+    <!-- 意识形态分类 -->
+    <section class="view" id="view-catalog">
+      <h2 class="section-title">意识形态分类</h2>
+      <p class="section-sub">点击下方卡片查看每种意识形态的简介、核心主张与维度画像。</p>
+      <div class="ideo-grid" id="ideoGrid"></div>
+
+      <div class="modal" id="ideoModal" hidden>
+        <div class="modal-backdrop" data-close="1"></div>
+        <div class="modal-card" id="ideoModalCard"></div>
+      </div>
+    </section>
+
+    <!-- 测试 -->
+    <section class="view" id="view-test">
+      <div class="test-head">
+        <h2 class="section-title">意识形态判断测试</h2>
+        <p class="section-sub">可选 50 / 100 / 200 题三种长度；逐题作答，答完后统一解析。</p>
+
+        <div class="mode-bar">
+          <span class="mode-label">题目数量</span>
+          <div class="mode-group" id="modeGroup">
+            <button class="mode-btn" data-mode="50">50 题 · 快速</button>
+            <button class="mode-btn" data-mode="100">100 题 · 标准</button>
+            <button class="mode-btn active" data-mode="200">200 题 · 完整</button>
+          </div>
+          <span class="mode-hint" id="modeHint"></span>
+        </div>
+
+        <div class="username-row">
+          <label class="username-label" for="userName">昵称（可选，用于记录答题）</label>
+          <input class="username-input" id="userName" type="text" maxlength="20" placeholder="匿名" />
+        </div>
+
+        <div class="test-progress">
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+          <span class="progress-text" id="progressText">0 / 0</span>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="resetBtn">重置</button>
+      </div>
+
+      <div class="test-body">
+        <div class="question-card" id="questionCard"></div>
+        <div class="test-nav">
+          <button class="btn btn-ghost" id="prevBtn">← 上一题</button>
+          <span class="page-indicator" id="pageIndicator"></span>
+          <button class="btn btn-primary" id="nextBtn">下一题 →</button>
+        </div>
+      </div>
+
+      <div class="test-submit" id="testSubmitWrap" hidden>
+        <div class="submit-box">
+          <h3>已完成全部题目</h3>
+          <p>点击生成你的意识形态分析结果。</p>
+          <button class="btn btn-primary" id="submitBtn">生成结果分析 →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 对比说明 -->
+    <section class="view" id="view-compare">
+      <h2 class="section-title">对比说明</h2>
+      <p class="section-sub">选择两种意识形态，查看它们在 10 个维度上的差异与核心分歧。</p>
+      <div class="compare-controls">
+        <select id="compareA" class="select"></select>
+        <span class="vs">VS</span>
+        <select id="compareB" class="select"></select>
+      </div>
+      <div class="compare-result" id="compareResult"></div>
+    </section>
+
+    <!-- 结果 -->
+    <section class="view" id="view-result">
+      <h2 class="section-title">你的意识形态分析结果</h2>
+      <div class="result-grid">
+        <div class="result-main">
+          <div class="report-narrative" id="reportNarrative"></div>
+          <div class="match-list" id="matchList"></div>
+          <div class="conflict-box" id="conflictBox"></div>
+          <div class="axis-interpret" id="axisInterpret"></div>
+        </div>
+        <div class="result-side">
+          <div class="radar-wrap">
+            <h3>你的维度画像</h3>
+            <div id="radar"></div>
+          </div>
+          <div class="axis-bars" id="axisBars"></div>
+        </div>
+      </div>
+
+      <div class="result-detail" id="resultDetail"></div>
+
+      <div class="answer-analysis" id="answerAnalysis"></div>
+
+      <div class="gov-fit" id="govFit"></div>
+
+      <div class="migration-fit" id="migrationFit"></div>
+
+      <div class="result-actions">
+        <button class="btn btn-primary" id="exportBtn">导出报告 ↓</button>
+        <button class="btn btn-primary" id="shareBtn">分享图片 ↗</button>
+        <button class="btn btn-ghost" data-goto="test">重做测试</button>
+        <button class="btn btn-ghost" id="backHomeBtn">返回首页</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>意识形态光谱 · 全球意识形态测试与分析 · 本平台内容仅作教育与研究用途，立场描述力求客观中立。</p>
+      <p class="footer-admin"><a href="admin.html" target="_blank" rel="noopener">管理员入口</a></p>
+    </div>
+  </footer>
+
+  <script src="js/axes.js?v=20260819d"></script>
+  <script src="js/ideologies.js?v=20260819d"></script>
+  <script src="js/questions.js?v=20260819d"></script>
+  <script src="js/migration.js?v=20260819d"></script>
+  <script src="js/app.js?v=20260819d"></script>
+</body>
+</html>
